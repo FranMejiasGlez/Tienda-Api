@@ -1,0 +1,21 @@
+const pedidosService = require('../services/pedidosService');
+exports.obtenerTodos = (req, res) => {
+    const productos = pedidosService.listar();
+
+};
+exports.obtenerPorId = (req, res) => {
+    const producto = pedidosService.buscarPorId(parseInt(req.params.id));
+    producto ? res.json(producto) : res.status(404).json({ mensaje: 'No encontrado' });
+};
+exports.crear = (req, res) => {
+    const nuevo = pedidosService.crear(req.body);
+    res.status(201).json(nuevo);
+};
+exports.actualizar = (req, res) => {
+    const actualizado = pedidosService.actualizar(parseInt(req.params.id), req.body);
+    actualizado ? res.json(actualizado) : res.status(404).json({ mensaje: 'No encontrado' });
+};
+exports.eliminar = (req, res) => {
+    const eliminado = pedidosService.eliminar(parseInt(req.params.id));
+    eliminado ? res.json(eliminado) : res.status(404).json({ mensaje: 'No encontrado' });
+};
