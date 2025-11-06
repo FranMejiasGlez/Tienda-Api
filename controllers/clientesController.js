@@ -1,10 +1,11 @@
 const clientesService = require('../services/clientesService');
 exports.obtenerTodos = (req, res) => {
-    const categoria = clientesService.listar();
+    const clientes = clientesService.listar();
+    res.jason(clientes);
 };
 exports.obtenerPorId = (req, res) => {
-    const producto = clientesService.buscarPorId(parseInt(req.params.id));
-    producto ? res.json(producto) : res.status(404).json({ mensaje: 'No encontrado' });
+    const cliente = clientesService.buscarPorId(parseInt(req.params.id));
+    cliente ? res.json(cliente) : res.status(404).json({ mensaje: 'No encontrado' });
 };
 exports.crear = (req, res) => {
     const nuevo = clientesService.crear(req.body);
