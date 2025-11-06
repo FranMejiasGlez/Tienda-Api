@@ -1,7 +1,7 @@
 const clientesService = require('../services/clientesService');
 exports.obtenerTodos = (req, res) => {
     const clientes = clientesService.listar();
-    res.jason(clientes);
+    res.json(clientes);
 };
 exports.obtenerPorId = (req, res) => {
     const cliente = clientesService.buscarPorId(parseInt(req.params.id));
