@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "nombre": "jason",
+        "apellidos": "Derulo",
+        "fecha_ingreso": "2025-10-19",
+        "sueldo": 2
+    },
+    {
+        "id": 2,
+        "nombre": "fran",
+        "apellidos": "mejias",
+        "fecha_ingreso": "2025-10-20",
+        "sueldo": 1
+    },
+    {
+        "id": 3,
+        "nombre": "andy",
+        "apellidos": "January",
+        "fecha_ingreso": "2025-10-21",
+        "sueldo": 0.5
+    },
+    {
+        "id": 1,
+        "nombre": "pablo",
+        "apellidos": "fuente",
+        "fecha_ingreso": "2025-10-19",
+        "sueldo": 0
+    }
+]
