@@ -7,7 +7,7 @@ app.use('/api/clientes', require('./routes/clientesRoutes.js'));
 app.use('/api/carritos', require('./routes/carritosRoutes.js'));
 app.use('/api/proveedores', require('./routes/proveedoresRoutes.js'));
 app.use('/api/pedidos', require('./routes/pedidosRoutes.js'));
-app.use('/api/pedidos', require('./routes/categoriaRoutes.js'));
+app.use('/api/categorias', require('./routes/categoriaRoutes.js'));
 
 //Mejora solicitada, guardar en un log de json todas las llamadas a la API
 app.listen(3000, () => console.log('Servidor escuchando en http://localhost:3000'));
