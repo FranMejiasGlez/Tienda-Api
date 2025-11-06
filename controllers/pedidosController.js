@@ -1,10 +1,11 @@
 const pedidosService = require('../services/pedidosService');
 exports.obtenerTodos = (req, res) => {
-    const productos = pedidosService.listar();
+    const pedidos = pedidosService.listar();
+    res.json(pedidos);
 
 };
 exports.obtenerPorId = (req, res) => {
-    const producto = pedidosService.buscarPorId(parseInt(req.params.id));
+    const pedido = pedidosService.buscarPorId(parseInt(req.params.id));
     producto ? res.json(producto) : res.status(404).json({ mensaje: 'No encontrado' });
 };
 exports.crear = (req, res) => {
